@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEPPOWER | Energy of Tomorrow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    <style>
+        :root {
+            --primary: #00f2fe;
+            --secondary: #4facfe;
+            --bg: #0a0a0c;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
+            z-index: -1;
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            filter: blur(80px);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(20%, 20%); }
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            width: 100%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #a0a0a8;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+            width: 100%;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .feature-item:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .icon {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .btn-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="blob"></div>
+
+    <div class="container">
+        <main class="glass-card">
+            <h1 id="title">GEPPOWER.NET</h1>
+            <p>นิยามใหม่ของพลังงานและเทคโนโลยีแห่งอนาคต เรามุ่งมั่นพัฒนาโซลูชั่นพลังงานที่ยั่งยืนและประสิทธิภาพสูง</p>
+            
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">เริ่มต้นใช้งาน</a>
+                <a href="https://geppower.io" class="btn btn-outline">เข้าสู่เว็บไซต์หลัก (.IO)</a>
+            </div>
+
+            <div class="features">
+                <div class="feature-item">
+                    <i data-lucide="zap" class="icon"></i>
+                    <h3>High Performance</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">ประมวลผลรวดเร็วด้วยเทคโนโลยีล่าสุด</p>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="shield-check" class="icon"></i>
+                    <h3>Secure Infrastructure</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">ปลอดภัยด้วยมาตรฐานระดับโลก</p>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="globe" class="icon"></i>
+                    <h3>Scalability</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">พร้อมขยายตัวไปกับทุกความสำเร็จ</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer style="margin-top: 2rem; color: #555; font-size: 0.8rem;">
+            &copy; 2026 GEPPOWER.NET | Powered by GitHub Pages
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
